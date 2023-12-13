@@ -1,10 +1,10 @@
-from recipes.views import home, contato, sobre
 from django.urls import path
-from django.contrib import admin
+from . import views
+
+app_name = 'recipes'
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', home),  # Home
-    path('sobre/', sobre),  # /sobre/
-    path('contato/', contato),  # /contato/
+    path('', views.home, name="home"),
+    path('recipes/<int:id>/', views.recipe, name="recipe"),
 ]
