@@ -27,8 +27,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'INSECURE')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True if os.environ.get('DEBUG') == '1' else False
 
-ALLOWED_HOSTS: list[str] = ['*']
-
+ALLOWED_HOSTS: list[str] = ['cursodjango.ofertas-trendy.com.br']
+CSRF_TRUSTED_ORIGINS = ['https://*.ofertas-trendy.com.br']
 
 # Application definition
 
